@@ -1,0 +1,14 @@
+first_name = 'Sohail'
+last_name = 'Mohammad'
+formated_string = 'I am {} {}'.format(first_name, last_name)
+print(formated_string)
+a = 3
+b = 4
+
+print('{} + {} = {}'.format(a, b, a + b))
+print('{} - {} = {}'.format(a, b, a - b))
+print('{} * {} = {}'.format(a, b, a * b))
+print('{} / {} = {:.2f}'.format(a, b, a / b)) # limits it to two digits after decimal
+print('{} % {} = {}'.format(a, b, a % b))
+print('{} // {} = {}'.format(a, b, a // b))
+print('{} ** {} = {}'.format(a, b, a ** b))
