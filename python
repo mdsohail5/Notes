@@ -12,3 +12,103 @@ print('{} / {} = {:.2f}'.format(a, b, a / b)) # limits it to two digits after de
 print('{} % {} = {}'.format(a, b, a % b))
 print('{} // {} = {}'.format(a, b, a // b))
 print('{} ** {} = {}'.format(a, b, a ** b))
+
+# If we want to start from right end we can use negative indexing. -1 is the last index
+langauge = 'Python'
+
+print(langauge[-1])
+print(langauge[-2])
+
+
+"""
+Python String Operations and Methods
+
+Topics covered:
+1. Negative Indexing
+2. String Slicing
+3. String Slicing with Steps
+4. Common String Methods
+5. String Validation
+"""
+
+# 1. Negative Indexing
+
+language = "Python"
+
+print(language[-1])  # Last character
+print(language[-2])  # Second-last character
+
+
+# 2. String Slicing
+
+text = "this is python language"
+
+print(text[:8])
+print(text[-8:])
+print(text[:-8])
+print(text[8:])
+
+
+# 3. String Slicing with Steps
+
+numbers = "1234567890"
+
+print(numbers[0:10:2])
+
+
+# 4. capitalize() - Capitalize the First Character
+
+print(text.capitalize())
+
+
+# 5. count() - Count Occurrences of a Substring
+
+print(text.count("t"))
+print(text.count("t", 0, 15))
+print(text.count("py"))
+
+
+# 6. startswith() and endswith()
+
+print(text.startswith("th"))
+print(text.endswith("ge"))
+
+
+# 7. find() - Find the Index of a Substring
+
+sentence = "How are you doing"
+
+print(sentence.find("d"))
+print(sentence.find("you"))
+
+
+# 8. String Validation Methods
+
+first_string = "hello5"
+second_string = "hello"
+third_string = "123"
+
+print(first_string.isalnum())
+print(second_string.isalpha())
+print(third_string.isdigit())
+
+
+# 9. Uppercase and Lowercase Validation
+
+upper_text = "HELLO"
+lower_text = "hello"
+
+print(upper_text.isupper())
+print(lower_text.islower())
+
+
+# 10. replace() - Replace a Substring
+
+replace_text = "Hello, I am learning coding"
+
+print(replace_text.replace("coding", "programming language"))
+
+
+# 11. split() - Split a String into a List
+
+print(text.split())
