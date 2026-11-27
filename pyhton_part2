@@ -1,0 +1,355 @@
+
+"""
+Python Data Structures
+
+Topics Covered:
+1. Lists
+2. Tuples
+3. Sets
+4. Dictionaries
+"""
+
+
+# ==========================================
+# 1. LISTS
+# ==========================================
+
+# Creating an empty list
+
+empty_list = list()
+print(len(empty_list))
+
+
+# Creating a list and accessing elements
+
+fruits = ["orange", "banana", "berries", "mango"]
+total_fruits = len(fruits)
+
+print(fruits)
+print(fruits[0])
+print(total_fruits)
+
+
+# Creating a list with different data types
+
+mixed_list = [
+    "sohail",
+    25,
+    True,
+    {"location": "Atlanta", "state": "Georgia"}
+]
+
+print(mixed_list)
+print(mixed_list[0])
+print(mixed_list[3])
+
+
+# Accessing elements using negative indexing
+
+fruits = ["banana", "orange", "mango", "lemon"]
+
+first_fruit = fruits[-4]
+last_fruit = fruits[-1]
+second_last_fruit = fruits[-2]
+
+print(first_fruit)
+print(last_fruit)
+print(second_last_fruit)
+
+
+# List slicing
+
+print(fruits[0:2])
+
+
+# Checking whether an element exists
+
+does_exist = "orange" in fruits
+print(does_exist)
+
+
+# Adding elements using append()
+
+fruits.append("grapes")
+print(fruits)
+
+
+# Inserting an element at a specific index
+
+fruits.insert(2, "apple")
+print(fruits)
+
+
+# Removing a specific element
+
+fruits.remove("banana")
+print(fruits)
+
+
+# Removing an element using its index
+
+fruits.pop(2)
+print(fruits)
+
+
+# Removing all elements
+
+fruits.clear()
+print(fruits)
+
+
+# Joining lists using the + operator
+
+positive_numbers = [1, 2, 3, 4, 5]
+zero = [0]
+negative_numbers = [-5, -4, -3, -2, -1]
+
+integers = negative_numbers + zero + positive_numbers
+print(integers)
+
+
+# Extending a list with another list
+
+list_one = ["item1", "item2"]
+list_two = ["item3", "item4", "item5"]
+
+list_one.extend(list_two)
+print(list_one)
+
+
+# Finding the index of an element
+
+index_value = positive_numbers.index(2)
+print(index_value)
+
+
+# Reversing a list
+
+positive_numbers.reverse()
+print(positive_numbers)
+
+
+# Sorting a list in ascending and descending order
+
+sort_numbers = [2, 4, 2, 6, -1]
+
+sort_numbers.sort()
+print(sort_numbers)
+
+sort_numbers.sort(reverse=True)
+print(sort_numbers)
+
+
+# Copying a list
+
+copied_fruits = fruits.copy()
+print(copied_fruits)
+
+
+# ==========================================
+# 2. TUPLES
+# ==========================================
+
+# Creating a tuple
+
+items_tuple = ("item1", "item2", "item3", "item4")
+
+print(items_tuple)
+print(items_tuple[0])
+print(len(items_tuple))
+
+
+# Accessing tuple elements
+
+print(items_tuple[-1])
+
+
+# Converting a tuple into a list
+
+items_list = list(items_tuple)
+print(items_list)
+
+
+# Tuples are immutable.
+# Convert to a list to modify their elements.
+
+items_list.append("item5")
+print(items_list)
+
+
+# Deleting a tuple
+
+items_tuple_to_delete = ("item1", "item2", "item3")
+del items_tuple_to_delete
+
+
+# ==========================================
+# 3. SETS
+# ==========================================
+
+# Creating an empty set
+
+empty_set = set()
+print(len(empty_set))
+
+
+# Creating a set
+
+items_set = {"item1", "item2", "item3", "item4"}
+
+print(items_set)
+
+
+# Checking whether an element exists
+
+print("Does set contain item3:", "item3" in items_set)
+
+
+# Adding an element
+
+items_set.add("item5")
+print(items_set)
+
+
+# Adding multiple elements
+
+items_set.update(["item6", "item7"])
+print(items_set)
+
+
+# Removing an element
+
+items_set.remove("item7")
+print(items_set)
+
+
+# Removing an arbitrary element using pop()
+
+items_set.pop()
+print(items_set)
+
+
+# Removing all elements
+
+items_set.clear()
+print(items_set)
+
+
+# Deleting a set
+
+set_to_delete = {"item1", "item2"}
+del set_to_delete
+
+
+# Converting a list into a set
+
+numbers_list = [1, 2, 2, 3, 3, 4]
+unique_numbers = set(numbers_list)
+
+print(unique_numbers)
+
+
+# Joining sets using union()
+
+set_one = {1, 2, 3, 4, 5}
+set_two = {5, 6, 7, 8}
+
+set_three = set_one.union(set_two)
+print(set_three)
+
+
+# Updating an existing set
+
+set_three = set()
+set_three.update(set_two)
+print(set_three)
+
+
+# Finding common elements using intersection()
+
+print(set_one.intersection(set_two))
+
+
+# Finding elements present only in the first set
+
+print(set_one.difference(set_two))
+
+
+# Finding elements present only in the second set
+
+print(set_two.difference(set_one))
+
+
+# ==========================================
+# 4. DICTIONARIES
+# ==========================================
+
+# Creating a dictionary
+
+person = {
+    "first_name": "Sohail",
+    "last_name": "Mohammad",
+    "age": 25,
+    "skills": ["java", "python"],
+    "address": {
+        "city": "Atlanta",
+        "state": "Georgia"
+    }
+}
+
+
+# Getting the number of key-value pairs
+
+print(len(person))
+
+
+# Accessing dictionary values
+
+print(person["first_name"])
+print(person["skills"][0])
+print(person["address"]["city"])
+
+
+# Adding a new key-value pair
+
+person["height"] = 5.9
+print(person)
+
+
+# Updating an existing value
+
+person["age"] = 26
+print(person["age"])
+
+
+# Adding an element to a nested list
+
+person["skills"].append("javascript")
+print(person["skills"])
+
+
+# Removing a key-value pair using pop()
+
+person.pop("height")
+print(person)
+
+
+# Getting all dictionary keys
+
+print(person.keys())
+
+
+# Getting all dictionary values
+
+print(person.values())
+
+
+# Getting all key-value pairs
+
+print(person.items())
+
+
+# Creating a copy of a dictionary
+
+person_copy = person.copy()
+print(person_copy)
